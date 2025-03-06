@@ -1,0 +1,248 @@
+/* Base styles */
+html {
+  text-size-adjust: 100%;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 20px;
+  background-color: #f8f9fa;
+  color: #333;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  color: #1a73e8;
+  margin-top: 0;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+h3 {
+  color: #5f6368;
+  margin-top: 20px;
+}
+
+/* Log area */
+#log {
+  width: 100%;
+  height: 400px;
+  font-family: 'Roboto Mono', monospace;
+  background-color: #282c34;
+  color: #abb2bf;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  resize: vertical;
+  margin-bottom: 20px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Controls section */
+.controls {
+  margin: 20px 0;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+button {
+  padding: 8px 16px;
+  background-color: #4285f4;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  font-weight: 500;
+}
+
+button:hover {
+  background-color: #3367d6;
+}
+
+button:disabled {
+  background-color: #9aa0a6;
+  cursor: not-allowed;
+}
+
+#stop-button {
+  background-color: #ea4335;
+}
+
+#stop-button:hover {
+  background-color: #d33426;
+}
+
+#download-button {
+  background-color: #34a853;
+}
+
+#download-button:hover {
+  background-color: #2e9549;
+}
+
+/* Progress bar */
+.progress {
+  width: 100%;
+  height: 8px;
+  background-color: #e0e0e0;
+  border-radius: 4px;
+  margin: 15px 0;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  background-color: #4285f4;
+  border-radius: 4px;
+  width: 0%;
+  transition: width 0.3s;
+}
+
+/* Configuration section */
+.config {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 15px;
+  margin-bottom: 25px;
+  padding: 15px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+}
+
+.config-item {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: #5f6368;
+  font-weight: 500;
+}
+
+input, select {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+input:focus, select:focus {
+  outline: none;
+  border-color: #4285f4;
+  box-shadow: 0 0 0 2px rgba(66, 133, 244, 0.2);
+}
+
+/* Text generation controls */
+.generation-controls {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+#prompt-input {
+  flex-grow: 1;
+  padding: 8px 12px;
+}
+
+#length-input {
+  width: 80px;
+  padding: 8px;
+}
+
+/* Memory info display */
+.memory-info {
+  display: flex;
+  justify-content: space-between;
+  background-color: #f5f5f5;
+  padding: 10px;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #5f6368;
+  margin-top: 10px;
+}
+
+/* Information section */
+.info-section {
+  margin: 20px 0;
+}
+
+.info-box {
+  background-color: #e8f0fe;
+  border-left: 4px solid #4285f4;
+  padding: 15px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.info-box h3 {
+  margin-top: 0;
+  color: #1a73e8;
+}
+
+details {
+  margin: 10px 0;
+}
+
+summary {
+  cursor: pointer;
+  color: #1a73e8;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.details-content {
+  padding-left: 15px;
+  border-left: 2px solid #dadce0;
+  margin: 10px 0 10px 5px;
+}
+
+.details-content p {
+  margin: 8px 0;
+}
+
+.details-content a {
+  color: #1a73e8;
+  text-decoration: none;
+}
+
+.details-content a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .config {
+    grid-template-columns: 1fr;
+  }
+  
+  .generation-controls {
+    flex-direction: column;
+  }
+  
+  #prompt-input, #length-input, #generate-button {
+    width: 100%;
+  }
+  
+  .controls {
+    flex-direction: column;
+  }
+  
+  button {
+    width: 100%;
+  }
+}

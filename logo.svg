@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Background -->
+  <rect width="64" height="64" rx="12" fill="#4285f4" />
+  
+  <!-- Central "T" shape for Transformer -->
+  <rect x="16" y="14" width="32" height="6" rx="2" fill="white" />
+  <rect x="29" y="14" width="6" height="36" rx="2" fill="white" />
+  
+  <!-- Attention lines (representing multi-head attention) -->
+  <line x1="16" y1="30" x2="48" y2="30" stroke="white" stroke-width="2" stroke-dasharray="3,2" />
+  <line x1="16" y1="38" x2="48" y2="38" stroke="white" stroke-width="2" stroke-dasharray="3,2" />
+  <line x1="16" y1="46" x2="48" y2="46" stroke="white" stroke-width="2" stroke-dasharray="3,2" />
+  
+  <!-- Connection nodes (representing the network) -->
+  <circle cx="16" cy="30" r="3" fill="#FFDE03" />
+  <circle cx="48" cy="30" r="3" fill="#FFDE03" />
+  <circle cx="16" cy="38" r="3" fill="#FFDE03" />
+  <circle cx="48" cy="38" r="3" fill="#FFDE03" />
+  <circle cx="16" cy="46" r="3" fill="#FFDE03" />
+  <circle cx="48" cy="46" r="3" fill="#FFDE03" />
+</svg>
